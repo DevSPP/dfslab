@@ -1,3 +1,11 @@
+/*-----------------------------------
+Name: SUBRAT PRASAD PANDA
+Roll number: CS1913
+Date: 13/08/2019
+Program description: Enumeration of Cantor's Array
+Acknowledgements: **
+------------------------------------*/
+
 #include <stdio.h>
 #include <math.h>
 
