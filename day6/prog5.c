@@ -1,44 +1,18 @@
 #include <stdio.h>
+#include <math.h>
 
-int main(){
-
-  int N,n;
-  scanf("%d",&N);
-  int diff=N;
-  for(n=1;diff>0;n++)
-    {diff -= n;}
-
-  n--;
-  diff=(diff<0)?(diff+n):diff;
-  printf("n:%d diff:%d\n",n, diff );
-  int i,j; // i=row and j=col
-  if(n%2==0)//even case
-  {
-    if (diff==0) {
-      i=n;
-      j=1;
-    }
-    if (diff==1) {
-      i=n+diff-1;
-      j=1;
-    }
-    else {
-    j=diff;
-    i= n-(diff-1);}
-  }
-  else //odd case
-    {
-      if (diff==0) {
-        i=n;
-        j=1;
-      }
-      if(diff==1){
-        i=n+diff-1;
-        j=1;
-      }
-      if(diff>1) {
-      j=diff;
-      i= n-(diff-1);}
-    }
-  printf("%d/%d\n",j,i);
+int main()
+{
+  int N, i, j, sum = 0, n, d;
+  scanf("%d", &N);
+  n = sqrt(2 * N);
+  sum = ((n) * (n + 1)) / 2;
+  n = (N > sum) ? n + 1 : n;
+  sum = ((n) * (n + 1)) / 2;
+  d = (N > sum) ? N - sum : sum - N;
+  if ((n & 1) == 0) //even
+    i = (n - d), j = (d + 1);
+  else //odd
+    i = (d + 1), j = (n - d);
+  printf("%d/%d\n", i, j);
 }
