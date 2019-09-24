@@ -1,0 +1,13 @@
+A. scanf: 1. Starts echoing the terminal 2. Keeps storing the strin buffer 
+            3. when enter is pressed starts scanning the buffer 4. Return when the match is found. 5. Keep looking to the buffer
+B. getchar: 1.single char from the buffer 2. Keeps looking at buffer till EOF or null.
+C. Getch: Function declared in conio.h, doesn't echos terminal.
+D. Gets: Not used in C11
+E. getc: to get signlew char from FILE pointer
+
+-scanf is known for having format specifier
+-sscanf to scan any string
+---File--- Scanning
+1: fgets: char *fgets(char *str, int n, FILE *stream) -returns same pointer- Null is returned w/o editing buffer
+2. fscanf
+3. fgetc and fputc

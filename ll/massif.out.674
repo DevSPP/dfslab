@@ -1,0 +1,134 @@
+desc: (none)
+cmd: ./main
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=123610
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=123671
+mem_heap_B=32
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=123744
+mem_heap_B=48
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=123814
+mem_heap_B=64
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=124222
+mem_heap_B=576
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=130890
+mem_heap_B=592
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=137973
+mem_heap_B=592
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=peak
+n2: 592 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 512 0x4EB118A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 512 0x4EC1377: _IO_doallocbuf (genops.c:365)
+   n1: 512 0x4EC0496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 512 0x4EBE9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 512 0x4E8E532: vfprintf (vfprintf.c:1328)
+      n1: 512 0x4E97F24: printf (printf.c:33)
+       n1: 512 0x1088F8: printLL (ll.c:64)
+        n0: 512 0x108B26: main (main.c:14)
+ n4: 80 0x10879D: create_node (ll.c:6)
+  n2: 32 0x10883C: insertAfter (ll.c:32)
+   n1: 16 0x1089AD: insertAt (ll.c:95)
+    n0: 16 0x108B62: main (main.c:17)
+   n0: 16 0x108B02: main (main.c:11)
+  n1: 16 0x1087E8: push (ll.c:15)
+   n0: 16 0x108AEA: main (main.c:9)
+  n1: 16 0x108877: append (ll.c:44)
+   n0: 16 0x108B1A: main (main.c:13)
+  n0: 16 0x108ACE: main (main.c:7)
+#-----------
+snapshot=8
+#-----------
+time=137973
+mem_heap_B=576
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=143561
+mem_heap_B=560
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=143621
+mem_heap_B=544
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=143681
+mem_heap_B=528
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=143741
+mem_heap_B=512
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=146722
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

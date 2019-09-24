@@ -1,0 +1,6 @@
+b> breakpoint
+watch> watchpoint
+help running> to show commands tp runningg
+help> show helps
+
+

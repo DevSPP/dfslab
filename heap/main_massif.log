@@ -1,0 +1,8 @@
+==100== Massif, a heap profiler
+==100== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
+==100== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==100== Command: ./main
+==100== Parent PID: 99
+==100== 
+==100== error calling PR_SET_PTRACER, vgdb might block
+==100== 
