@@ -15,9 +15,26 @@ int main()
   //printf("%d %d %d\n",ptr[0], ptr[1], ptr[2]);
 
   push(stack1, &a);
-  printf("%d %ld\n", ptr[stack1->num_elements - 1], stack1->num_elements);
+  stackPrint(stack1);
   push(stack1, &b);
-  printf("%d %ld\n", ptr[stack1->num_elements - 1], stack1->num_elements);
-  printf(isEmpty(stack1) ? "true" : "false");
+  stackPrint(stack1);
+  a = 50;
+  b = 60;
+  push(stack1, &a);
+  push(stack1, &b);
+  a = 10;
+  b = 15;
+  push(stack1, &a);
+  push(stack1, &b);
+  stackPrint(stack1);
+  //pop
+  int *c = pop(stack1);
+  stackPrint(stack1);
+  c = pop(stack1);
+  stackPrint(stack1);
+  b = 100;
+  push(stack1, &b);
+  stackPrint(stack1);
+  free(c);
   freeStack(stack1);
 }

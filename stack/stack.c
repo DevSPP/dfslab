@@ -1,5 +1,9 @@
 #include "stack.h"
 //stack follows 1 based indexing
+//stack is created on the heap
+
+static int extend_mem(STACK *);
+
 STACK *initStack(size_t element_size)
 {
   STACK *new = (STACK *)malloc(sizeof(STACK));
@@ -30,21 +34,52 @@ bool isEmpty(STACK *s)
 
 bool isFull(STACK *s)
 {
-  return s->max_elements - s->num_elements;
+  return !(s->max_elements - s->num_elements);
+}
+
+static int extend_mem(STACK *s)
+{
+  s->max_elements *= 2;
+  s->elements = realloc(s->elements, s->element_size * s->max_elements);
+  if (s->elements)
+    printf("Stack Extended\n");
+  else
+  {
+    printf("Memory Error\n");
+    return 0;
+  }
+  return 1;
 }
 
 void push(STACK *s, void *eptr)
 {
-  if (isFull)
-    //call to extend memory
-    //if failed retrn stack overflow null no memory
-    printf("%p\n", s->elements + (s->element_size) * (s->num_elements));
-  printf("%d\n", *((int *)eptr));
+  if (isFull(s))
+  {
+    if (!extend_mem(s))
+    {
+      printf("Stack Overflow\n");
+      return;
+    }
+  }
   memcpy((char *)s->elements + (s->element_size) * (s->num_elements), eptr, s->element_size);
   s->num_elements++;
 }
 
-//void pop(STACK *s, void *eptr)
+void *pop(STACK *s)
+{
+  if (isEmpty(s))
+  {
+    printf("List Empty");
+    return NULL;
+  }
+  else
+  {
+    void *eptr = malloc(s->element_size);
+    memcpy(eptr, (char *)s->elements + (s->element_size) * (s->num_elements - 1), s->element_size);
+    --(s->num_elements);
+    return eptr;
+  }
+}
 
 void freeStack(STACK *s)
 {
@@ -52,4 +87,28 @@ void freeStack(STACK *s)
   free(s);
   s = NULL;
   printf("Stack Deleted\n");
+}
+
+//print integers
+
+void stackPrint(STACK *s)
+{
+  if (isEmpty(s))
+  {
+    printf("Stack Empty");
+    return;
+  }
+  unsigned count = 0;
+  int *array = s->elements;
+  printf("____________________\n");
+  printf(" n %10s\n", "data");
+  printf("--------------------\n");
+  while (count < s->max_elements)
+  {
+    printf(">%d %9d", count + 1, array[count]);
+    if (count + 1 == s->num_elements)
+      printf("<(top)");
+    printf("\n");
+    count++;
+  }
 }
