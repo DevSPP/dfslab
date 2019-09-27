@@ -2,7 +2,7 @@
 
 int main()
 {
-    /*DATA d;
+    DATA d;
     d.var1 = 4;
     NODE *head = create_node(d);
     d.var1 = 7;
@@ -18,27 +18,27 @@ int main()
     printLL(head);
     delAt(&head, 3);
     printLL(head);
-    destroyLL(&head);*/
-    //normal ll
-    DATA d;
-    d.var1 = 2;
-    LIST_A l = create_list(8);
-    printLL_A(&l);
-    insert_A(&l, d, 0);
-    printLL_A(&l);
-    d.var1 = 6;
-    insert_A(&l, d, 2);
-    printLL_A(&l);
-    d.var1 = 10;
-    insert_A(&l, d, 1);
-    printLL_A(&l);
-    d.var1 = 17;
-    insert_A(&l, d, 1);
-    printLL_A(&l);
-    d.var1 = 15;
-    insert_A(&l, d, 2);
-    printLL_A(&l);
-    d.var1 = 20;
-    insert_A(&l, d, 0);
-    printLL_A(&l);
+    destroyLL(&head);
+    // //normal ll
+    // DATA d;
+    // d.var1 = 2;
+    // LIST_A l = create_list(8);
+    // printLL_A(&l);
+    // insert_A(&l, d, 0);
+    // printLL_A(&l);
+    // d.var1 = 6;
+    // insert_A(&l, d, 2);
+    // printLL_A(&l);
+    // d.var1 = 10;
+    // insert_A(&l, d, 1);
+    // printLL_A(&l);
+    // d.var1 = 17;
+    // insert_A(&l, d, 1);
+    // printLL_A(&l);
+    // d.var1 = 15;
+    // insert_A(&l, d, 2);
+    // printLL_A(&l);
+    // d.var1 = 20;
+    // insert_A(&l, d, 0);
+    // printLL_A(&l);
 }

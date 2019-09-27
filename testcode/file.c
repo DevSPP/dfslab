@@ -82,4 +82,16 @@ SEEK_CUR : It denotes file pointer’s current position.
 
 5. fread(char **lineptr, n, fp)
 
+//=====================FIle SCAN=========
+1. gets
+2. puts
+3. getc
+4. putc
+5. fscanf
+6. fprintf
+7. fread //read binary data
+8. fwrite
+9. getline // allocates the buffer itself
+
+
 */

@@ -1,0 +1,12 @@
+1. (gdb) p 'f2.c'::x
+2. p (type[])value
+3. set print array on // to print array pretty
+4. set print elements number-of-elements
+5. show print frame-arguments
+6. set print pretty on
+7. show convenience //variables used in gdb
+8.print [Expression]
+print $[Previous value number]
+print {[Type]}[Address]
+print [First element]@[Element count]
+print /[Format] [Expression]

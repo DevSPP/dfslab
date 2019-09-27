@@ -98,14 +98,13 @@ void stackPrint(STACK *s)
     printf("Stack Empty");
     return;
   }
-  unsigned count = 0;
-  int *array = s->elements;
+  int count = 0;
   printf("____________________\n");
   printf(" n %10s\n", "data");
   printf("--------------------\n");
-  while (count < s->max_elements)
+  while (count < s->num_elements)
   {
-    printf(">%d %9d", count + 1, array[count]);
+    printf(">%-3d %9d", count + 1, *(int *)((s->elements) + (sizeof(int) * count)));
     if (count + 1 == s->num_elements)
       printf("<(top)");
     printf("\n");

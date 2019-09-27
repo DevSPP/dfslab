@@ -22,19 +22,20 @@ int main()
   b = 60;
   push(stack1, &a);
   push(stack1, &b);
-  a = 10;
-  b = 15;
-  push(stack1, &a);
-  push(stack1, &b);
-  stackPrint(stack1);
-  //pop
-  int *c = pop(stack1);
-  stackPrint(stack1);
-  c = pop(stack1);
-  stackPrint(stack1);
-  b = 100;
-  push(stack1, &b);
-  stackPrint(stack1);
-  free(c);
+  // a = 10;
+  // b = 15;
+  // push(stack1, &a);
+  // push(stack1, &b);
+  // stackPrint(stack1);
+  // //pop
+  // int *c = pop(stack1);
+  // free(c);
+  // stackPrint(stack1);
+  // c = pop(stack1);
+  // free(c);
+  // stackPrint(stack1);
+  // b = 100;
+  // push(stack1, &b);
+  // stackPrint(stack1);
   freeStack(stack1);
 }

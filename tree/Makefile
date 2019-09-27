@@ -1,14 +1,14 @@
 
-DEPS = stack.h
-OBJ = stack.o
+DEPS = tree.h
+OBJ = tree.o
 
 all: main gdb
 
 main: $(OBJ) main.c
-	gcc -g3 $^ -o $@
+	gcc -g3 -Wall $^ -o $@
 
 %.o: %.c $(DEPS)
-	gcc -c -g3 $< -o $@
+	gcc -c -Wall -g3 $< -o $@
 
 memcheck: main
 	valgrind --tool=memcheck --track-origins=yes --leak-check=full --log-file=main_memcheck.log ./main
