@@ -1,0 +1,47 @@
+desc: (none)
+cmd: ./main
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=148147
+mem_heap_B=48
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=148746
+mem_heap_B=96
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=149338
+mem_heap_B=96
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=peak
+n2: 96 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 96 0x10938C: insert (bst.c:24)
+  n0: 96 0x109FED: main (main.c:20)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=149338
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

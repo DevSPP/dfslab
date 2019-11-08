@@ -23,5 +23,18 @@ typedef struct btnode
 } BTNODE;
 
 BTNODE *addNode(DATA *);
+//=========Alternate
 
+typedef struct tree
+{
+    int free;
+    int max_len;
+    DATA *elements;
+} BTREE;
+
+BTREE *init_btree();
+void insertEnd_bt(BTREE *bt, DATA d);
+void insertAt_bt(BTREE *bt, DATA d, int loc); //at particular location
+void print_bt(BTREE *bt);
+void destroy_bt(BTREE *bt);
 #endif // _GTREE_

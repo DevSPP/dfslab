@@ -140,7 +140,7 @@ void heapsort(HEAP *h, void *A, size_t element_size, size_t array_size, int (*co
     h->array = A;
     for (int i = (array_size / 2); i >= 1; i--)
     {
-        swapDown(h, i);
+        swapDown(h, i); //Build Heap
     }
     /* Sort by successive deleteMax */
     while (h->num_used > 1)
