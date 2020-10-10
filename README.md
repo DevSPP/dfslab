@@ -1,4 +1,4 @@
-# DFS Lab ISI Kolkata
+# My Codes for DFS Lab Course Work@ISI Kolkata
 
 All the programs were written as a part of course work practice problems. The codes might be messy at someplaces as this was my first attempt to write programs in C language.
 
